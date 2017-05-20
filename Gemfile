@@ -43,3 +43,5 @@ gem 'devise', git: 'https://github.com/plataformatec/devise.git', ref: 'a62faa2c
 gem 'devise_token_auth', git: 'https://github.com/lynndylanhurley/devise_token_auth.git'
 gem 'omniauth'
 gem "letter_opener", :group => :development
+gem 'rails_admin'
+gem 'erubis'
