@@ -45,3 +45,4 @@ gem 'omniauth'
 gem "letter_opener", :group => :development
 gem 'rails_admin'
 gem 'erubis'
+gem 'cancancan'
