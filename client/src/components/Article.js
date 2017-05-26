@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Card, CardHeader, CardText, CardActions} from 'material-ui/Card';
+import ReactMarkdown from 'react-markdown'
 
 const styles = {
   root: {
@@ -14,7 +15,7 @@ class Article extends Component {
       <Card style={styles.root}>
         <CardHeader title={this.props.title}/>
         <CardText>
-         {this.props.content}
+          <ReactMarkdown source={this.props.content}/>
         </CardText>
       </Card>
     );
