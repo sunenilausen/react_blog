@@ -47,7 +47,7 @@ class Articles extends Component {
       return articles
       ? <div style={styles.root}>
           {Object.keys(articles).map((key) => {
-            return <Article title={articles[key].title} content={articles[key].content}/>
+            return <Article title={articles[key].title} content={articles[key].content} id={key}/>
           })} 
         </div>
       : <div>

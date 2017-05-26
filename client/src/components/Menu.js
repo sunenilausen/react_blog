@@ -50,13 +50,11 @@ class Menu extends Component {
 
   render() {
     return (
-      <div>
-        <AppBar
-          title="Title"
-          iconElementLeft={<IconButton><NavigationClose /></IconButton>}
-          iconElementRight={this.state.logged ? <Logged /> : <Login />}
-        />
-      </div>
+      <AppBar
+        title="Title"
+        iconElementLeft={<IconButton><NavigationClose /></IconButton>}
+        iconElementRight={this.state.logged ? <Logged /> : <Login />}
+      />
     );
   }
 }
