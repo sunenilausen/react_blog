@@ -9,7 +9,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    marginTop: '4rem',
+    minHeight: '100vh',
   }
 }
 

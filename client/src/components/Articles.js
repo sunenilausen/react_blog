@@ -4,10 +4,11 @@ import Article from './Article';
 const styles = {
   root: {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'start',
     alignItems: 'center',
     flexDirection: 'column',
-    marginTop: '4rem',
+    minHeight: '100vh',
+    padding: '1rem'
   }
 }
 
