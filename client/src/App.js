@@ -1,26 +1,22 @@
 import React, { Component } from 'react';
-import './App.css';
-import Articles from './components/Articles';
-import Menu from './components/Menu';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'; 
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import {cyan500} from 'material-ui/styles/colors';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 
-const muiTheme = getMuiTheme({
-  palette: {
-    textColor: cyan500,
-  }
-});
+import Home from "./home/Home";
+import Login from "./login/Login";
 
 class App extends Component {
   render() {
     return (
-      <MuiThemeProvider muiTheme={muiTheme}>
+      <Router>
         <div>
-          <Menu/>
-          <Articles/>
+          <Route exact path="/" component={Home} />
+          <Route path='/login' component={Login} />
         </div>
-      </MuiThemeProvider>
+      </Router>
     );
   }
 }
