@@ -26,10 +26,7 @@ class BlogPage extends Component {
   render() {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
-        <div>
-          <Menu/>
-          <Articles/>
-        </div>
+        <Articles/>
       </MuiThemeProvider>
     );
   }

@@ -19,14 +19,14 @@ class Article extends Component {
         <CardText>
           <ReactMarkdown source={this.props.content}/>
         </CardText>
-         <CardActions>
+         {/*<CardActions>
           <FlatButton label="Edit" href={`/article/${this.props.id}`}/>
           <Toggle 
             label="Visible" 
             labelPosition="right"
             style={{margin: 20}}
            />
-        </CardActions>
+        </CardActions>*/}
       </Card>
     );
   }
