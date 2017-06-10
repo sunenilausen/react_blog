@@ -20,7 +20,7 @@ class CategoryPage extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.name !== this.props.name) {
+    if (prevProps.match.params.categoryId !== this.props.match.params.categoryId) {
       this.getArticles();
     }
   }
@@ -34,7 +34,7 @@ class CategoryPage extends Component {
     })
   }
   getArticles () {
-    this.fetch(`/api/v1/categories/${this.props.name}`)
+    this.fetch(`/api/v1/categories/${this.props.match.params.categoryId}`)
       .then(articles => {
         this.setState({articles: articles})
       })
@@ -42,7 +42,7 @@ class CategoryPage extends Component {
   render() {
     return (
       <div>
-        <h2> { this.props.name } </h2>
+        <h2> { this.props.match.params.categoryId } </h2>
         <Articles articles={this.state.articles}/>
       </div>
     );

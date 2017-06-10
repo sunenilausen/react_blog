@@ -1,17 +1,19 @@
 module Api  
   module V1
     class ArticlesController < ApplicationController
-      before_action :set_article, only: [:show, :update, :destroy]
+      before_action :set_article, only: [:update, :destroy]
 
       # GET /articles
       def index
         @articles = Article.all
+
 
         render json: @articles
       end
 
       # GET /articles/1
       def show
+        @article = Article.find_by(title: params[:id])
         render json: @article
       end
 

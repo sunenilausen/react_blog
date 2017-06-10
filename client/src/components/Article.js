@@ -4,30 +4,13 @@ import ReactMarkdown from 'react-markdown'
 import FlatButton from 'material-ui/FlatButton';
 import Toggle from 'material-ui/Toggle';
 
-const styles = {
-  root: {
-    marginTop: '1rem',
-    width: '100%'
-  }
-}
-
 class Article extends Component {
   render() {
     return (
-      <Card style={styles.root}>
-        <CardHeader title={this.props.title}/>
-        <CardText>
-          <ReactMarkdown source={this.props.content}/>
-        </CardText>
-         {/*<CardActions>
-          <FlatButton label="Edit" href={`/article/${this.props.id}`}/>
-          <Toggle 
-            label="Visible" 
-            labelPosition="right"
-            style={{margin: 20}}
-           />
-        </CardActions>*/}
-      </Card>
+      <div>
+        <h1 article-title> { this.props.article.title } </h1>
+        <ReactMarkdown source={ this.props.article.content }/>
+      </div>
     );
   }
 }

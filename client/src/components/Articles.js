@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Article from './Article';
+import ArticleCard from './ArticleCard';
 
 const styles = {
   root: {
@@ -20,7 +20,7 @@ class Articles extends Component {
       return articles
       ? <div style={styles.root}>
           {Object.keys(articles).map((key) => {
-            return <Article title={articles[key].title} content={articles[key].content} id={key}/>
+            return <ArticleCard title={articles[key].title} content={articles[key].content} id={key}/>
           })} 
         </div>
       : <div>
