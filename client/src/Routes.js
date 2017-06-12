@@ -13,6 +13,18 @@ import CategoryPage from "./containers/CategoryPage";
 import BlogPage from "./containers/BlogPage";
 import Menu from "./components/Menu";
 
+const styles = {
+  Aligner: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  AlignerItem: {
+    marginTop: '1rem',
+    width: '60%',
+  }
+}
+
 class Routes extends Component {
   render() {
     return (
@@ -20,10 +32,12 @@ class Routes extends Component {
        <MuiThemeProvider>
         <div>
           <Menu />
-          <Route exact path="/" component={HomePage} />
-          <Route path='/login' component={LoginPage} />
-          <Route path='/blog/:articleId' component={BlogPage} />
-          <Route path="/categories/:categoryId" component={CategoryPage} />
+          <div style={styles.Aligner}>
+            <Route exact path="/" component={HomePage} style={styles.AlignerItem} />
+            <Route path='/login' component={LoginPage} style={styles.AlignerItem} />
+            <Route path='/blog/:articleId' component={BlogPage} style={styles.AlignerItem} />
+            <Route path="/categories/:categoryId" component={CategoryPage} style={styles.AlignerItem} />
+          </div>
         </div>
        </MuiThemeProvider>
       </Router>

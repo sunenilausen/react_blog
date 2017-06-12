@@ -9,18 +9,6 @@ import {
 } from 'react-router-dom'
 
 
-const styles = {
-  Aligner: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  AlignerItem: {
-    width: '60%',
-  }
-}
-
-
 class BlogPage extends Component {
   constructor () {
     super()
@@ -54,9 +42,7 @@ class BlogPage extends Component {
   }
   render() {
     return (
-      <div style={styles.Aligner}>
-        <Article style={styles.AlignerItem} article={this.state.article}/> 
-      </div>
+      <Article article={this.state.article}/> 
     );
   }
 }

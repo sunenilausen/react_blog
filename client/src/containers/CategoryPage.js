@@ -42,7 +42,7 @@ class CategoryPage extends Component {
   render() {
     return (
       <div>
-        <h2> { this.props.match.params.categoryId } </h2>
+        <h1> { this.props.match.params.categoryId } </h1>
         <Articles articles={this.state.articles}/>
       </div>
     );

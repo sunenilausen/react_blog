@@ -7,8 +7,9 @@ import Toggle from 'material-ui/Toggle';
 class Article extends Component {
   render() {
     return (
-      <div>
-        <h1 article-title> { this.props.article.title } </h1>
+      <div className="markdown-body">
+        <h2> { this.props.article.title } </h2>
+        <span className="date"> { this.props.article.created_at } </span>
         <ReactMarkdown source={ this.props.article.content }/>
       </div>
     );

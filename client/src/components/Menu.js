@@ -51,23 +51,23 @@ class Menu extends Component {
     return (
       <div>
         <AppBar
-          title="Title"
+          title="Sune Nilausen's Blog"
           iconElementLeft={<IconButton><NavigationClose /></IconButton>}
           iconElementRight={
             <ToolbarGroup>
-              <Link to={'/categories/Code'}>
+              <Link className="menu-link" to={'/categories/Code'}>
                 <MenuItem primaryText="Code" style={buttonStyle} />
               </Link>
-             <Link to={'/categories/Life'}>
+             <Link className="menu-link" to={'/categories/Life'}>
                 <MenuItem primaryText="Life" style={buttonStyle} />
               </Link>
-              <Link to={'/categories/Food'}>
+              <Link className="menu-link" to={'/categories/Food'}>
                 <MenuItem primaryText="Food" style={buttonStyle} />
               </Link>
-              <Link to={'/categories/Art'}>
+              <Link className="menu-link" to={'/categories/Art'}>
                 <MenuItem primaryText="Art" style={buttonStyle} />
               </Link>
-              <Link to={'/categories/Other'}>
+              <Link className="menu-link" to={'/categories/Other'}>
                 <MenuItem primaryText="Other" style={buttonStyle} />
               </Link>
               {this.state.logged ? <Logged /> : <Login />}
