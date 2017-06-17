@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import '../App.css';
-import Article from '../components/Article';
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
+import EditArticle from '../components/EditArticle';
 
 
-class BlogPage extends Component {
+class EditPage extends Component {
   constructor () {
     super()
     this.state = {}
@@ -24,7 +24,6 @@ class BlogPage extends Component {
       this.getArticle();
     }
   }
-
   fetch (endpoint) {
     return new Promise((resolve, reject) => {
       window.fetch(endpoint)
@@ -39,11 +38,12 @@ class BlogPage extends Component {
         this.setState({article: article})
       })
   }
+  
   render() {
     return (
-      <Article article={this.state.article}/> 
+      <EditArticle article={this.state.article} />
     );
   }
 }
 
-export default BlogPage;
+export default EditPage;

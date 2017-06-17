@@ -11,6 +11,7 @@ import HomePage from "./containers/HomePage";
 import LoginPage from "./containers/LoginPage";
 import CategoryPage from "./containers/CategoryPage";
 import BlogPage from "./containers/BlogPage";
+import EditPage from "./containers/EditPage";
 import Menu from "./components/Menu";
 
 const styles = {
@@ -36,6 +37,7 @@ class Routes extends Component {
             <Route exact path="/" component={HomePage} style={styles.AlignerItem} />
             <Route path='/login' component={LoginPage} style={styles.AlignerItem} />
             <Route path='/blog/:articleId' component={BlogPage} style={styles.AlignerItem} />
+            <Route path='/edit/:articleId' component={EditPage} style={styles.AlignerItem} />
             <Route path="/categories/:categoryId" component={CategoryPage} style={styles.AlignerItem} />
           </div>
         </div>

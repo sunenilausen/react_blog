@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import {Card, CardHeader, CardText, CardActions} from 'material-ui/Card';
 import ReactMarkdown from 'react-markdown'
-import FlatButton from 'material-ui/FlatButton';
-import Toggle from 'material-ui/Toggle';
 
 class Article extends Component {
   render() {
