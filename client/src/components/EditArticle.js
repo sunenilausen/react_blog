@@ -18,7 +18,7 @@ class EditArticle extends Component {
     this.state = { article: {title: '', content: '' } }
   }
 
-  componentWillReceiveProps() {
+  componentDidMount() {
     this.setState({article: this.props.article})
   }
 
@@ -32,14 +32,14 @@ class EditArticle extends Component {
   }
 
   patchArticle () {
-    this.fetch(`/api/v1/articles/${this.props.article.id}`, {
+    return fetch(`/api/v1/articles/${this.props.article.id}`, {
       method: 'PATCH',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        id: this.props.match.params.articleId,
+        id: this.props.article.id,
         title: this.state.article.title,
         content: this.state.article.content,
       })

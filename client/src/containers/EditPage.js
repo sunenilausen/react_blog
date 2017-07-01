@@ -40,9 +40,11 @@ class EditPage extends Component {
   }
   
   render() {
-    return (
-      <EditArticle article={this.state.article} />
-    );
+    const { article } = this.state;
+    if(Object.keys(article).length === 0) {
+      return <div>Loading</div>
+    }
+    return <EditArticle article={this.state.article} />
   }
 }
 
